@@ -71,5 +71,10 @@ permissions:
   simplegm.info:
     default: true
     description: "Gives access to use /simplegm"
+<<<<<<< HEAD
 version: 2.1
 website: geninfinity.com
+=======
+version: 2.0
+website: rn-mc.com
+>>>>>>> c4571d2c68e4d19b9e17cd3db99238514a47f161

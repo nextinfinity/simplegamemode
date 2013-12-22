@@ -88,7 +88,11 @@ public class SimpleGamemode extends JavaPlugin{
 				if(args.length != 0){
 					return false;
 				}
+<<<<<<< HEAD
 				player.sendMessage(ChatColor.AQUA + "SimpleGamemode - Developed by xGIx - Version 2.1");
+=======
+				player.sendMessage(ChatColor.AQUA + "SimpleGamemode - Developed by xGIx - Version 2.0");
+>>>>>>> c4571d2c68e4d19b9e17cd3db99238514a47f161
 				player.sendMessage(ChatColor.GOLD + "/0 - Changes the player's gamemode to Survival.");
 				player.sendMessage(ChatColor.GOLD + "/1 - Changes the player's gamemode to Creative.");
 				player.sendMessage(ChatColor.GOLD + "/2 - Changes the player's gamemode to Adventure.");
