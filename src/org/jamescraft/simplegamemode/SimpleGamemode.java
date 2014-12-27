@@ -64,7 +64,7 @@ public class SimpleGamemode extends JavaPlugin{
 			    	if(player.hasPermission("simplegm.use.others")){					
 			    		try{
 			    			Player targetPlayer = player.getServer().getPlayer(args[0]);
-			    			targetPlayer.setGameMode(GameMode.CREATIVE;
+			    			targetPlayer.setGameMode(GameMode.CREATIVE);
 			    			player.sendMessage(ChatColor.GOLD + "Successfully set " + targetPlayer.getName() + "'s gamemode to Creative!");
 			    		}catch(Exception e){
 			    			player.sendMessage(ChatColor.RED + "That player is not on the server!");
