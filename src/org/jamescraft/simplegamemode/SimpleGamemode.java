@@ -30,7 +30,7 @@ public class SimpleGamemode extends JavaPlugin{
 	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args){
 		Player player = (Player) sender;	
 		if(commandLabel.equalsIgnoreCase("0")){
-			if(player.hasPermission("simplegm.survival")){				
+			if(player.hasPermission("simplegm.use")){				
 			if(args.length > 1){
 				return false;
 			}
@@ -38,9 +38,14 @@ public class SimpleGamemode extends JavaPlugin{
 				player.setGameMode(GameMode.SURVIVAL);
 				player.sendMessage(ChatColor.GOLD + "Gamemode set to Survival!");
 			    }else if(args.length == 1){
-			    	if(player.hasPermission("simplegm.survival.others")){
-					Player targetPlayer = player.getServer().getPlayer(args[0]);
-					targetPlayer.setGameMode(GameMode.SURVIVAL);		
+			    	if(player.hasPermission("simplegm.use.others")){
+			    		try{
+			    			Player targetPlayer = player.getServer().getPlayer(args[0]);
+			    			targetPlayer.setGameMode(GameMode.SPECTATOR);
+			    			player.sendMessage(ChatColor.GOLD + "Successfully set " + targetPlayer.getName() + "'s gamemode to Survival!");
+			    		}catch(Exception e){
+			    			player.sendMessage(ChatColor.RED + "That player is not on the server!");
+			    		}		
 			    	}
 			    }
 			}
@@ -48,7 +53,7 @@ public class SimpleGamemode extends JavaPlugin{
 		}
 		
 		if(commandLabel.equalsIgnoreCase("1")){
-			if(player.hasPermission("simplegm.creative")){
+			if(player.hasPermission("simplegm.use")){
 				if(args.length > 1){
 					return false;
 				}
@@ -56,9 +61,14 @@ public class SimpleGamemode extends JavaPlugin{
 				player.setGameMode(GameMode.CREATIVE);
 				player.sendMessage(ChatColor.GOLD + "Gamemode set to Creative!");
 				}else if(args.length == 1){
-			    	if(player.hasPermission("simplegm.creative.others")){					
-					Player targetPlayer = player.getServer().getPlayer(args[0]);
-					targetPlayer.setGameMode(GameMode.CREATIVE);
+			    	if(player.hasPermission("simplegm.use.others")){					
+			    		try{
+			    			Player targetPlayer = player.getServer().getPlayer(args[0]);
+			    			targetPlayer.setGameMode(GameMode.SPECTATOR);
+			    			player.sendMessage(ChatColor.GOLD + "Successfully set " + targetPlayer.getName() + "'s gamemode to Creative!");
+			    		}catch(Exception e){
+			    			player.sendMessage(ChatColor.RED + "That player is not on the server!");
+			    		}
 			    	}
 				}
 			}
@@ -66,7 +76,7 @@ public class SimpleGamemode extends JavaPlugin{
 		}
 		
 		if(commandLabel.equalsIgnoreCase("2")){
-			if(player.hasPermission("simplegm.adventure")){
+			if(player.hasPermission("simplegm.use")){
 				if(args.length > 1){
 					return false;
 				}
@@ -74,9 +84,37 @@ public class SimpleGamemode extends JavaPlugin{
 				player.setGameMode(GameMode.ADVENTURE);
 				player.sendMessage(ChatColor.GOLD + "Gamemode set to Adventure!");
 				}else if(args.length == 1){
-			    	if(player.hasPermission("simplegm.adventure.others")){					
-					Player targetPlayer = player.getServer().getPlayer(args[0]);
-					targetPlayer.setGameMode(GameMode.ADVENTURE);
+			    	if(player.hasPermission("simplegm.use.others")){					
+			    		try{
+			    			Player targetPlayer = player.getServer().getPlayer(args[0]);
+			    			targetPlayer.setGameMode(GameMode.SPECTATOR);
+			    			player.sendMessage(ChatColor.GOLD + "Successfully set " + targetPlayer.getName() + "'s gamemode to Adventure!");
+			    		}catch(Exception e){
+			    			player.sendMessage(ChatColor.RED + "That player is not on the server!");
+			    		}
+			    	}
+				}
+			}
+			return true;
+		}
+		
+		if(commandLabel.equalsIgnoreCase("3")){
+			if(player.hasPermission("simplegm.use")){
+				if(args.length > 1){
+					return false;
+				}
+				if(args.length == 0){
+				player.setGameMode(GameMode.SPECTATOR);
+				player.sendMessage(ChatColor.GOLD + "Gamemode set to Spectator!");
+				}else if(args.length == 1){
+			    	if(player.hasPermission("simplegm.use.others")){
+			    		try{
+			    			Player targetPlayer = player.getServer().getPlayer(args[0]);
+			    			targetPlayer.setGameMode(GameMode.SPECTATOR);
+			    			player.sendMessage(ChatColor.GOLD + "Successfully set " + targetPlayer.getName() + "'s gamemode to Spectator!");
+			    		}catch(Exception e){
+			    			player.sendMessage(ChatColor.RED + "That player is not on the server!");
+			    		}
 			    	}
 				}
 			}
@@ -88,14 +126,11 @@ public class SimpleGamemode extends JavaPlugin{
 				if(args.length != 0){
 					return false;
 				}
-<<<<<<< HEAD
-				player.sendMessage(ChatColor.AQUA + "SimpleGamemode - Developed by xGIx - Version 2.1");
-=======
-				player.sendMessage(ChatColor.AQUA + "SimpleGamemode - Developed by xGIx - Version 2.0");
->>>>>>> c4571d2c68e4d19b9e17cd3db99238514a47f161
+				player.sendMessage(ChatColor.AQUA + "SimpleGamemode - Developed by Next Infinity - Version 3.0");
 				player.sendMessage(ChatColor.GOLD + "/0 - Changes the player's gamemode to Survival.");
 				player.sendMessage(ChatColor.GOLD + "/1 - Changes the player's gamemode to Creative.");
 				player.sendMessage(ChatColor.GOLD + "/2 - Changes the player's gamemode to Adventure.");
+				player.sendMessage(ChatColor.GOLD + "/3 - Changes the player's gamemode to Spectator.");
 			}
 			return true;
 		}
