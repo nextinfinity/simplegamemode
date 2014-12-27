@@ -41,7 +41,7 @@ public class SimpleGamemode extends JavaPlugin{
 			    	if(player.hasPermission("simplegm.use.others")){
 			    		try{
 			    			Player targetPlayer = player.getServer().getPlayer(args[0]);
-			    			targetPlayer.setGameMode(GameMode.SPECTATOR);
+			    			targetPlayer.setGameMode(GameMode.SURVIVAL);
 			    			player.sendMessage(ChatColor.GOLD + "Successfully set " + targetPlayer.getName() + "'s gamemode to Survival!");
 			    		}catch(Exception e){
 			    			player.sendMessage(ChatColor.RED + "That player is not on the server!");
@@ -64,7 +64,7 @@ public class SimpleGamemode extends JavaPlugin{
 			    	if(player.hasPermission("simplegm.use.others")){					
 			    		try{
 			    			Player targetPlayer = player.getServer().getPlayer(args[0]);
-			    			targetPlayer.setGameMode(GameMode.SPECTATOR);
+			    			targetPlayer.setGameMode(GameMode.CREATIVE;
 			    			player.sendMessage(ChatColor.GOLD + "Successfully set " + targetPlayer.getName() + "'s gamemode to Creative!");
 			    		}catch(Exception e){
 			    			player.sendMessage(ChatColor.RED + "That player is not on the server!");
@@ -87,7 +87,7 @@ public class SimpleGamemode extends JavaPlugin{
 			    	if(player.hasPermission("simplegm.use.others")){					
 			    		try{
 			    			Player targetPlayer = player.getServer().getPlayer(args[0]);
-			    			targetPlayer.setGameMode(GameMode.SPECTATOR);
+			    			targetPlayer.setGameMode(GameMode.ADVENTURE);
 			    			player.sendMessage(ChatColor.GOLD + "Successfully set " + targetPlayer.getName() + "'s gamemode to Adventure!");
 			    		}catch(Exception e){
 			    			player.sendMessage(ChatColor.RED + "That player is not on the server!");
