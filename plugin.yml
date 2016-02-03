@@ -26,14 +26,13 @@ commands:
     permission-message: "You do not have permission for this command!"
     usage: Type /simplegm for help
 description: "Simple Gamemode Changer."
-main: org.jamescraft.simplegamemode.SimpleGamemode
+main: net.theinfinitymc.simplegamemode.SimpleGamemode
 name: SimpleGamemode
 permissions: 
   simplegm.*: 
     children: 
       simplegm.use: true
       simplegm.use.others: true
-      simplegm.info: true
     default: op
     description: "Gives access to all SimpleGamemode commands."           
   simplegm.use: 
@@ -42,8 +41,4 @@ permissions:
   simplegm.use.others: 
     default: op
     description: "Lets the player gamemode others"  
-  simplegm.info:
-    default: true
-    description: "Gives access to use /simplegm"
-version: 3.0
-website: infnet.co
+version: 4.0
