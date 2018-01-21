@@ -2,29 +2,16 @@ author: NextInfinity
 commands: 
   0: 
     description: "Changes the player's gamemode to Survival."
-    permission: simplegm.use
-    permission-message: "You do not have permission for this command!"
-    usage: Type /simplegm for help
+    usage: /0 [player]
   1: 
     description: "Changes the player's gamemode to Creative."
-    permission: simplegm.use
-    permission-message: "You do not have permission for this command!"
-    usage: Type /simplegm for help
+    usage: /1 [player]
   2: 
     description: "Changes the player's gamemode to Adventure."
-    permission: simplegm.use
-    permission-message: "You do not have permission for this command!"
-    usage: Type /simplegm for help
+    usage: /2 [player]
   3: 
     description: "Changes the player's gamemode to Spectator."
-    permission: simplegm.use
-    permission-message: "You do not have permission for this command!"
-    usage: Type /simplegm for help
-  simplegm:
-    description: "Shows basic plugin info and command usage."
-    permission: simplegm.info
-    permission-message: "You do not have permission for this command!"
-    usage: Type /simplegm for help
+    usage: /3 [player]
 description: "Simple Gamemode Changer."
 main: net.theinfinitymc.simplegamemode.SimpleGamemode
 name: SimpleGamemode
@@ -34,11 +21,11 @@ permissions:
       simplegm.use: true
       simplegm.use.others: true
     default: op
-    description: "Gives access to all SimpleGamemode commands."           
+    description: "Includes all SimpleGM permissions"
   simplegm.use: 
     default: op
-    description: "Lets the player gamemode themself"
+    description: "Allows the player to change their own gamemode"
   simplegm.use.others: 
     default: op
-    description: "Lets the player gamemode others"  
-version: 4.0
+    description: "Allows the player to change the gamemode of other players"
+version: 5.0
